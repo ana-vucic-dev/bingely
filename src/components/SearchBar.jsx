@@ -1,11 +1,18 @@
-import { useEffect, useRef, useState } from 'react';
-import useKey from '../hooks/useKey';
+import { useRef } from 'react';
+import useKey from '../hooks/useKey.js';
+import useWindowWidth from '../hooks/useWindowWidth.js';
 
 export default function SearchBar({ query, handleQueryChange }) {
-  const [isSmallMobile, setIsSmallMobile] = useState(window.innerWidth < 425);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
+  const width = useWindowWidth();
   const searchRef = useRef();
+
+  const device = width < 425 ? 'mobile' : width < 768 ? 'tablet' : 'desktop';
+
+  const placeholders = {
+    mobile: 'Search...',
+    tablet: 'Search movies and TV shows',
+    desktop: 'Press / to jump to search box'
+  };
 
   function focusSearch(e) {
     e.preventDefault();
@@ -18,16 +25,6 @@ export default function SearchBar({ query, handleQueryChange }) {
 
   useKey('/', focusSearch);
   useKey('Escape', blurSearch);
-
-  useEffect(() => {
-    function handleResize() {
-      setIsSmallMobile(window.innerWidth < 425);
-      setIsMobile(window.innerWidth < 768);
-    }
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   return (
     <form className='search-form'>
@@ -45,13 +42,7 @@ export default function SearchBar({ query, handleQueryChange }) {
           ref={searchRef}
           id='search'
           className='search-input'
-          placeholder={
-            isSmallMobile
-              ? 'Search...'
-              : isMobile
-                ? 'Search movies and TV shows'
-                : 'Press / to jump to search box'
-          }
+          placeholder={placeholders[device]}
           value={query}
           onChange={handleQueryChange}
           autoFocus
