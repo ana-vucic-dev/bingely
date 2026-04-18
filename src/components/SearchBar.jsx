@@ -1,10 +1,23 @@
 import { useEffect, useRef, useState } from 'react';
+import useKey from '../hooks/useKey';
 
 export default function SearchBar({ query, handleQueryChange }) {
   const [isSmallMobile, setIsSmallMobile] = useState(window.innerWidth < 425);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const searchRef = useRef();
+
+  function focusSearch(e) {
+    e.preventDefault();
+    searchRef.current?.focus();
+  }
+
+  function blurSearch() {
+    searchRef.current?.blur();
+  }
+
+  useKey('/', focusSearch);
+  useKey('Escape', blurSearch);
 
   useEffect(() => {
     function handleResize() {
@@ -14,27 +27,6 @@ export default function SearchBar({ query, handleQueryChange }) {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    function handleSearchKeyDown(e) {
-      if (e.key === '/') {
-        e.preventDefault();
-
-        if (searchRef.current) {
-          searchRef.current.focus();
-        }
-      }
-
-      if (e.key === 'Escape') {
-        if (searchRef.current) {
-          searchRef.current.blur();
-        }
-      }
-    }
-
-    window.addEventListener('keydown', handleSearchKeyDown);
-    return () => window.removeEventListener('keydown', handleSearchKeyDown);
   }, []);
 
   return (
