@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import useKey from '../hooks/useKey.js';
 import { baseUrl, API_KEY } from '../config/omdbApi.js';
 import formatTime from '../utils/formatTime.js';
 import formatVotes from '../utils/formatVotes.js';
@@ -109,17 +110,7 @@ export default function MovieDetails({
     return () => (document.title = 'Bingely');
   }, [title]);
 
-  useEffect(() => {
-    function handleKeyDown(e) {
-      if (e.key === 'Backspace') {
-        goBack();
-      }
-    }
-
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [goBack]);
+  useKey('Backspace', goBack);
 
   return (
     <section
