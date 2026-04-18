@@ -1,0 +1,294 @@
+@import './variables.css';
+@import './base.css';
+@import './layout.css';
+@import './list.css';
+@import './search.css';
+@import './watchlist.css';
+@import './details.css';
+@import './utilities.css';
+
+@media screen and (min-width: 320px) {
+  .watchlist-stats {
+    font-size: var(--font-xs);
+    gap: var(--space-sm);
+  }
+
+  .movie-list-btn {
+    font-size: var(--font-xs);
+    gap: var(--space-md);
+  }
+
+  .list.watchlist img {
+    grid-row: 1 / -1;
+  }
+
+  .watchlist .watched-movie-info {
+    grid-column: 2;
+  }
+
+  .details .rating-and-plot {
+    padding: var(--space-md);
+  }
+
+  .plot {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    padding: var(--space-xs);
+  }
+
+  input[type='search'],
+  .search-results-header,
+  .search-results-header .num-of-matches {
+    font-size: var(--font-base);
+  }
+
+  .panel-header {
+    padding: var(--space-md) var(--space-xl);
+  }
+
+  .movie-list-btn {
+    padding: var(--space-base) var(--space-xl);
+    column-gap: var(--space-lg);
+  }
+
+  .list.watchlist li .movie-list-btn {
+    row-gap: 0;
+  }
+
+  .list .movie-title {
+    font-size: var(--font-base);
+  }
+
+  .details-overview h2 {
+    font-size: var(--h2-md);
+  }
+
+  .watchlist .watched-movie-info {
+    gap: var(--space-md);
+  }
+
+  .details .rating-and-plot {
+    padding: var(--space-lg-1);
+  }
+
+  .rating-wrapper {
+    padding: var(--space-md) var(--space-base);
+  }
+
+  .rating .star-btn {
+    width: 1.8rem !important;
+    height: 1.8rem !important;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  body {
+    padding: var(--space-sm);
+  }
+
+  .logo h1 {
+    font-size: var(--h1-md);
+  }
+
+  .logo .slogan {
+    font-size: var(--font-lg);
+  }
+
+  .watchlist-stats {
+    gap: var(--space-base);
+  }
+
+  .movie-list-btn {
+    font-size: var(--font-sm);
+  }
+
+  .details-overview {
+    padding: var(--space-lg);
+  }
+
+  .details-overview h2 {
+    font-size: var(--h2-lg);
+  }
+
+  .details .rating-and-plot {
+    padding: 3.4rem;
+    gap: var(--space-lg);
+  }
+
+  .rating {
+    width: 270px;
+    margin: 0 auto;
+  }
+
+  .rating .star-btn {
+    width: 2.2rem !important;
+    height: 2.2rem !important;
+  }
+
+  .add-btn {
+    width: 270px;
+    font-size: var(--font-sm);
+  }
+
+  .plot {
+    font-size: var(--font-sm);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    padding: var(--space-base);
+  }
+
+  .logo {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  input[type='search'] {
+    font-size: var(--font-md);
+  }
+
+  .panel-header {
+    padding: var(--space-lg) var(--space-xxl);
+  }
+
+  .movie-list-btn {
+    padding: var(--space-base) var(--space-xxl);
+  }
+
+  .list .movie-title {
+    font-size: var(--font-md);
+  }
+
+  .details-overview h2 {
+    font-size: var(--h2-lg);
+  }
+
+  .details img {
+    max-height: 350px;
+  }
+
+  .details-overview p {
+    font-size: var(--font-sm);
+  }
+
+  .details-overview .imdb-rating {
+    flex-direction: row;
+  }
+
+  .details .rating-and-plot {
+    padding: 4rem;
+  }
+
+  .rating {
+    width: 320px;
+    padding: var(--space-xs) var(--space-lg);
+  }
+
+  .rating .star-btn {
+    width: 2.4rem !important;
+    height: 2.4rem !important;
+  }
+
+  .add-btn {
+    font-size: var(--font-base);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: var(--space-lg);
+  }
+
+  .nav-bar {
+    padding: 0 var(--space-xxl);
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  input[type='search'] {
+    width: 300px;
+  }
+
+  .details-overview h2 {
+    font-size: var(--h2-xl);
+  }
+
+  .rating p,
+  .plot {
+    font-size: var(--font-base);
+  }
+}
+
+@media screen and (min-width: 991px) {
+  body {
+    padding: var(--space-lg);
+  }
+
+  .logo h1 {
+    font-size: var(--h1-lg);
+  }
+
+  .main {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .panel {
+    max-width: 60rem;
+  }
+
+  .panel-header h2 {
+    font-size: var(--h2-md);
+  }
+
+  .watchlist-stats {
+    height: 2rem;
+    font-size: var(--font-base);
+  }
+
+  .search-results-header .num-of-matches {
+    height: 2rem;
+    font-size: var(--font-base);
+  }
+
+  .error {
+    font-size: var(--font-lg);
+  }
+
+  .details-header {
+    min-height: 300px;
+  }
+
+  .details img,
+  .details-overview {
+    max-height: 300px;
+  }
+
+  .details-overview h2 {
+    font-size: var(--h2-xxl);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+}

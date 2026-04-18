@@ -1,0 +1,203 @@
+.details {
+  font-size: var(--font-xs);
+  line-height: 1.4;
+  padding-top: var(--space-xxs);
+  position: relative;
+}
+
+.details-header {
+  min-height: 350px;
+  max-height: max-content;
+
+  display: flex;
+}
+
+.back-btn {
+  height: 3.2rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  font-family: sans-serif;
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: var(--bg-color-500);
+  background-color: var(--text-color-light);
+  box-shadow: var(--shadow-float);
+
+  position: absolute;
+  top: 1.6rem;
+  left: 1rem;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-btn:active,
+.back-btn:focus-visible {
+  color: var(--bg-color-900);
+  outline: 2px solid var(--bg-color-900);
+}
+
+@media (hover: hover) {
+  .back-btn:hover {
+    background-color: var(--text-color-medium);
+    color: var(--bg-color-900);
+  }
+}
+
+.back-btn-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.delete-btn {
+  height: 2.2rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  font-size: var(--font-xxs);
+  font-weight: 700;
+  color: var(--bg-color-900);
+  background-color: var(--danger-color-light);
+
+  position: absolute;
+  top: 1.6rem;
+  right: 0.8rem;
+  z-index: 9999;
+}
+
+.delete-btn:active,
+.delete-btn:focus-visible {
+  outline: 2px solid var(--text-color-light);
+  outline-offset: 1px;
+}
+
+@media (hover: hover) {
+  .delete-btn:hover {
+    background-color: var(--danger-color-dark);
+  }
+}
+
+.details img {
+  max-width: 33%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.details-overview {
+  width: 100%;
+  padding: var(--space-md);
+  background-color: var(--bg-color-100);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-base);
+}
+
+.details-overview h2 {
+  font-size: var(--h2-base);
+  line-height: 1.1;
+  margin-bottom: var(--space-xxs);
+}
+
+.details-overview p {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xxs);
+}
+
+.details-overview > p {
+  flex-wrap: wrap;
+}
+
+.details-overview .imdb-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stars-and-votes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xxs);
+}
+
+.details .rating-and-plot {
+  padding: var(--space-md) var(--space-xs);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-base);
+}
+
+.rating-wrapper {
+  background-color: var(--bg-color-100);
+  border-radius: var(--radius-lg);
+  padding: var(--space-base) var(--space-xs);
+  margin-bottom: var(--space-xxs);
+}
+
+.rating {
+  font-weight: 600;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.rating div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rating p {
+  font-size: var(--font-sm);
+  align-self: center;
+}
+
+.add-btn {
+  font-size: var(--font-xs);
+  font-weight: 700;
+  color: var(--text-color-medium);
+  background-color: var(--primary-color-dark);
+  padding: var(--space-xs);
+  border-radius: var(--radius-pill);
+
+  transform: scale(1);
+  transition: background-color 0.3s;
+}
+
+.add-btn:active {
+  transform: scale(0.98);
+}
+
+.add-btn:active,
+.add-btn:focus-visible {
+  outline: 1px solid var(--text-color-light);
+  outline-offset: 1px;
+}
+
+@media (hover: hover) {
+  .add-btn:hover {
+    background-color: var(--primary-color-light);
+  }
+}
+
+.plot {
+  padding: 0 var(--space-base);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-base);
+}
+
+.plot-summary {
+  font-style: italic;
+}
+
+.actors,
+.creators {
+  font-weight: 700;
+}

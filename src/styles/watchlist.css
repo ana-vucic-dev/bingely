@@ -1,0 +1,34 @@
+.watchlist-stats {
+  font-size: var(--font-xxs);
+  font-weight: 600;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.watchlist-stats p {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.list.watchlist li .movie-list-btn {
+  grid-template-rows: auto auto;
+}
+
+.watchlist .watched-movie-info {
+  grid-column: 1 / -1;
+  align-self: flex-end;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-xxs);
+}
+
+.watchlist .watched-movie-info .info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xxs);
+}

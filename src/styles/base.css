@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--body-font-family);
+  color: var(--text-color-medium);
+  background-color: var(--bg-color-900);
+  padding: var(--space-xxs);
+}
+
+fieldset {
+  border: none;
+}
+
+.btn {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}

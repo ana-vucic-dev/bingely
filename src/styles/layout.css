@@ -1,0 +1,86 @@
+.app {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bar {
+  width: 100%;
+  min-height: 7.2rem;
+  background-color: var(--primary-color-dark);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.logo h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--h1-sm);
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-color-light);
+}
+
+.logo .slogan {
+  font-family: var(--logo-font-family);
+  font-size: var(--font-md);
+  font-style: italic;
+}
+
+.main {
+  margin-top: var(--space-lg);
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.panel {
+  width: 100%;
+  min-height: 250px;
+  background-color: var(--bg-color-500);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.panel-header {
+  padding: var(--space-base) var(--space-md);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-color-100);
+  box-shadow: var(--shadow-soft);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.panel-header h2 {
+  font-size: var(--h2-base);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+footer {
+  padding: var(--space-xxl);
+  margin-top: var(--space-xxl);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer small {
+  font-size: var(--font-base);
+}
