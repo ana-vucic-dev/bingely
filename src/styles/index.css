@@ -72,7 +72,7 @@
   }
 
   .details .rating-and-plot {
-    padding: var(--space-lg-1);
+    padding: var(--space-lg);
   }
 
   .rating-wrapper {

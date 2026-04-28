@@ -41,12 +41,6 @@
   position: relative;
 }
 
-.list li:has(.movie-list-btn:active),
-.list li:has(.movie-list-btn:focus-visible) {
-  outline: 1px solid var(--text-color-medium);
-  outline-offset: -1px;
-}
-
 .movie-list-btn {
   width: 100%;
   font-size: var(--font-xxs);
@@ -61,8 +55,10 @@
   gap: var(--space-base);
 }
 
+.movie-list-btn:active,
 .movie-list-btn:focus-visible {
-  outline: none;
+  outline: 1px solid var(--text-color-medium);
+  outline-offset: -1px;
 }
 
 @media (hover: hover) {
