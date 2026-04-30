@@ -28,7 +28,7 @@ Designed for performance, accessibility, and a smooth keyboard-first experience.
 
 ## 🚀 Live Demo
 
-[![Bingely](https://img.shields.io/badge/live%20demo-online?style=for-the-badge&logo=Vercel&logoSize=auto&label=Vercel&labelColor=black)](#)
+[![Bingely](https://img.shields.io/badge/live%20demo-online?style=for-the-badge&logo=Vercel&logoSize=auto&label=Vercel&labelColor=black)](https://bingely-list.vercel.app/)
 
 ## 📸 Screenshots
 
