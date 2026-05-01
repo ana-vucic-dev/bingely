@@ -1,5 +1,11 @@
+import { useEffect } from 'react';
+
 export default function ErrorMessage({ message, updateLiveRegion }) {
-  updateLiveRegion(message);
+  useEffect(() => {
+    if (message) {
+      updateLiveRegion(message);
+    }
+  }, [message, updateLiveRegion]);
 
   return (
     <p className='error'>
